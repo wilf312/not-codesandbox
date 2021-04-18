@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>fid test</h1>
+
+    <div>
+      <input value="" id="app" autofocus />
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const updateApp = (count) => {
+          const d = document.querySelector("#app");
+          d.value = `test: ${count}`;
+        };
+
+        for (var i = 1; i < 10000000; i++) {
+          updateApp(i);
+        }
+      });
+    </script>
+  </body>
+</html>
